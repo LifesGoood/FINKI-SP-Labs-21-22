@@ -2,68 +2,37 @@
 #include <stdlib.h>
 
 int main()
-{
-  int array[100][100],d1=0,d2=0,k1=0,k2=0,n,n1,i,j;
-  char c='*';
-  scanf("%d",&n);
-  scanf("%d",&n1);
+{ 
+   int m,n,matrix[100][100],matrix2[100][100];
+   scanf("%d%d",&m,&n);
+  //  printf("[%d][%d]\n", m, n);
+   for(int i=0;i<m;i++) {
+       for(int j=0;j<n;j++) {
+          //   printf("[%d][%d]:", i, j);
+        scanf("%d",&matrix[i][j]);
+       }
+   }
 
-
-
-  for(int i=0;i<n;i++){
-  for(int j=0;j<n1;j++){
-    //   printf("[%d][%d]:", i, j);
-     scanf("%d",&array[i][j]);
-    }
-  }
-
-  printf("\n");
-//   (array[i+1][j+1]==1 || array[i-1][j-1]==1 || array[i+1][j-1]==1 || array[i-1][j+1]==1)
-
-  for(int i=0;i<n;i++){
-  for(int j=0;j<n1;j++){
-    //   printf("[%d][%d]:", i, j);
-     if(array[i][j]==1){
-        printf("%c ",c);
-    }else{
-     printf("%d ",array[i][j]);
-    }
-    }
-     printf("\n");
-  }
-
- for(int i=0;i<n;i++){
-  for(int j=0;j<n1;j++){
-         if(array[i][j]==0){
-        while((array[i+1][j+1]==1 || array[i-1][j-1]==1 || array[i+1][j-1]==1 || array[i-1][j+1]==1)){
-            array[i][j]++;
-            break;
+  
+   
+  for(int i=0;i<m;i++){
+       for(int j=0;j<n;j++){
+            int sum = 0;
+            if( matrix[i][j] != 0)
+                 printf("* ");
+            else{
+            for(int k = i-1;k<= i+1;k++){
+               for(int l = j-1;l<=j+1;l++){
+                   if(k>=0 && l>= 0 && k<m && l<n)
+                    sum+=matrix[k][l];
+               }
+            }
+          
+          
+            printf("%d ",sum);}
         }
-         }
-
-
-
-        }
-        }
-
-
-
-
-
-
-
-
-for(int i=0;i<n;i++){
-  for(int j=0;j<n1;j++){
-    //   printf("[%d][%d]:", i, j);
-
-     printf("%d ",array[i][j]);
-
-    }
-     printf("\n");
-  }
-
-
+    printf("\n");
+   }
+  
     return 0;
 }
-
