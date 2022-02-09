@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1644254784 source:d:\code blocks\lab1\k2_vezba7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
