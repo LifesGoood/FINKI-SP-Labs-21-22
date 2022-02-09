@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1643302743 source:d:\code blocks\lab1\lab9_vezba4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
